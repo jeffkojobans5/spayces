@@ -86,7 +86,10 @@ const Sidebar = () => {
 export default Sidebar;
 
 const Wrapper = styled.div`
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   flex: 2;
   height: 100vh;
 
