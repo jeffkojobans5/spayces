@@ -10,9 +10,10 @@ import Minimise from "../../assets/sidebar/minimise.png";
 
 // import links
 import { Links } from "../../constants/Links";
+
+// componenets
 import SidebarSearchBar from "./SidebarSearchBar";
 
-//
 const Sidebar = () => {
   return (
     <Wrapper className="global-bg">
@@ -20,6 +21,8 @@ const Sidebar = () => {
         {/* logo start */}
         <div className="logo">
           <img src={Logo} alt="logo" />
+
+          {/* minimise bar */}
           <img src={Minimise} alt="minimise-icon" className="minimise" />
         </div>
         {/* logo-end */}
@@ -89,14 +92,14 @@ const Wrapper = styled.div`
 
   .logo {
     img {
-      width: 50%;
+      width: 40%;
     }
 
     .minimise {
       position: absolute;
-      width: 35px;
+      width: 30px;
       right: -17px;
-      top: 50px;
+      top: 45px;
     }
   }
 

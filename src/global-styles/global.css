@@ -15,3 +15,16 @@ html,
 .side-bar-padding {
   padding: 2rem 1.5rem 1rem 1.5rem;
 }
+
+.global-main-container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.global-text-gray {
+  color: #1e1e1e;
+}
+
+.global-text-light-gray {
+  color: #8e8e8e;
+}

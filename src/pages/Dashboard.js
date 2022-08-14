@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 // imported components
-import MainContent from "../components/MainContent";
+import MainContent from "../components/maincontent/MainContent";
 import Sidebar from "../components/sidebar/Sidebar";
 
 const Dashboard = () => {
