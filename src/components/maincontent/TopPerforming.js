@@ -44,7 +44,7 @@ const TopPerforming = () => {
 export default TopPerforming;
 
 const Wrapper = styled.div`
-  margin-top: 4rem;
+  margin-top: 8rem;
 
   .global-main-container {
     h3 {

@@ -6,6 +6,8 @@ import SidebarProfile from "./SidebarProfile";
 import WelcomeNewProduct from "./WelcomeNewProduct";
 import Balances from "./Balances";
 import TopPerforming from "./TopPerforming";
+import Orders from "./Orders";
+import Statistics from "./Statistics";
 
 const MainContent = () => {
   return (
@@ -13,7 +15,9 @@ const MainContent = () => {
       <SidebarProfile />
       <WelcomeNewProduct />
       <Balances />
+      <Orders />
       <TopPerforming />
+      <Statistics />
     </Wrapper>
   );
 };

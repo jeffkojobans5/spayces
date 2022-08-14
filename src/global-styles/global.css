@@ -28,3 +28,11 @@ html,
 .global-text-light-gray {
   color: #8e8e8e;
 }
+
+.raphael-group-MLmAosXv {
+  display: none;
+}
+
+.fusioncharts-container {
+  margin-top: 3rem !important;
+}

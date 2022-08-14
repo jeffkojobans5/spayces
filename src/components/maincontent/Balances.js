@@ -13,7 +13,7 @@ const Balances = () => {
     <Wrapper>
       <div className="balances">
         <div className="global-main-container create-three-columns">
-          <BalanceProps amount="95" desc="Store Balance">
+          <BalanceProps amount="GHS 10,000.00" desc="Store Balance">
             <div className="rate">
               <div className="rate-amount">
                 <p>
