@@ -333,4 +333,10 @@ const Wrapper = styled.div`
   .MuiDataGrid-footerContainer {
     display: none;
   }
+
+  @media only screen and (max-width: 700px) {
+    .dot {
+      margin: 0rem 0.5rem !important;
+    }
+  }
 `;

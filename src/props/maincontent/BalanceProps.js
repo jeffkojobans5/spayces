@@ -104,7 +104,8 @@ const Wrapper = styled.div`
     .mobile-text {
       display: inline !important;
       position: relative;
-      top: -8px;
+      top: -7px;
+      font-size: 0.9rem;
     }
 
     .amount small {

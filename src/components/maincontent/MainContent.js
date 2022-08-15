@@ -19,7 +19,7 @@ const MainContent = () => {
   return (
     <Wrapper>
       <MobileHeader isOpen={isOpen} setIsOpen={setIsOpen} />
-      <MobileSideBar isOpen={isOpen} />
+      {isOpen && <MobileSideBar isOpen={isOpen} />}
       <SidebarProfile />
       <WelcomeNewProduct />
       <Balances />

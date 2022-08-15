@@ -10,14 +10,8 @@ import UserAvatar from "../../assets/sidebar/user-avatar.png";
 import { Links } from "../../constants/Links";
 
 const MobileSideBar = (props) => {
-  const { isOpen } = props;
-
   return (
-    <Wrapper
-      className="global-bg showSide"
-      // style={!isOpen ? { width: "100%" } : { width: "0" }}
-      // style={isOpen ? { translateX: "-100%" } : { translateX: "0" }}
-    >
+    <Wrapper className="global-bg showSide">
       <div className="container side-bar-padding">
         {/* begin-navbar */}
         <nav>
@@ -78,7 +72,8 @@ const Wrapper = styled.div`
   height: 90vh;
   position: absolute;
   width: 90%;
-  transform: translateX(-100%);
+  transform: translateX(0%);
+  z-index: 2;
 
   .showSide {
     transform: translateX(100%);
