@@ -6,6 +6,7 @@ import styled from "styled-components";
 // Search Icon
 import Logo from "../assets/sidebar/logo.png";
 import Hamburger from "../assets/maincontent/hamburger.png";
+import Close from "../assets/maincontent/close.png";
 
 const SidebarProfile = (props) => {
   const { isOpen, setIsOpen } = props;
@@ -23,11 +24,20 @@ const SidebarProfile = (props) => {
               <img src={Logo} alt="Logo" />
             </div>
             <div className="profilePic">
-              <img
-                src={Hamburger}
-                alt="menu-mobile"
-                onClick={(e) => showMobleMenu(e)}
-              />
+              {!isOpen && (
+                <img
+                  src={Hamburger}
+                  alt="menu-mobile"
+                  onClick={(e) => showMobleMenu(e)}
+                />
+              )}
+              {isOpen && (
+                <img
+                  src={Close}
+                  alt="menu-mobile"
+                  onClick={(e) => showMobleMenu(e)}
+                />
+              )}
             </div>
           </div>
         </div>

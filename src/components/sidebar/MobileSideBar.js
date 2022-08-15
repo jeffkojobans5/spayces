@@ -69,9 +69,9 @@ export default MobileSideBar;
 
 const Wrapper = styled.div`
   flex: 2;
-  height: 90vh;
-  position: absolute;
-  width: 90%;
+  height: 85vh;
+  position: fixed;
+  width: 85%;
   transform: translateX(0%);
   z-index: 2;
 
