@@ -60,4 +60,10 @@ const Wrapper = styled.div`
       border-radius: 8px;
     }
   }
+
+  @media only screen and (max-width: 700px) {
+    .product {
+      display: none;
+    }
+  }
 `;

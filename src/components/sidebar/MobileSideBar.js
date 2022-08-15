@@ -2,35 +2,23 @@
 import styled from "styled-components";
 
 // assets
-import Logo from "../../assets/sidebar/logo.png";
 import { ReactComponent as DownIcon } from "../../assets/sidebar/down.svg";
 import { ReactComponent as LogoutIcon } from "../../assets/sidebar/logout.svg";
 import UserAvatar from "../../assets/sidebar/user-avatar.png";
-import Minimise from "../../assets/sidebar/minimise.png";
 
 // import links
 import { Links } from "../../constants/Links";
 
-// componenets
-import SidebarSearchBar from "./SidebarSearchBar";
+const MobileSideBar = (props) => {
+  const { isOpen } = props;
 
-const Sidebar = () => {
   return (
-    <Wrapper className="global-bg">
+    <Wrapper
+      className="global-bg showSide"
+      // style={!isOpen ? { width: "100%" } : { width: "0" }}
+      // style={isOpen ? { translateX: "-100%" } : { translateX: "0" }}
+    >
       <div className="container side-bar-padding">
-        {/* logo start */}
-        <div className="logo">
-          <img src={Logo} alt="logo" />
-
-          {/* minimise bar */}
-          <img src={Minimise} alt="minimise-icon" className="minimise" />
-        </div>
-        {/* logo-end */}
-
-        {/* search-bar-start */}
-        <SidebarSearchBar />
-        {/* search-bar-end */}
-
         {/* begin-navbar */}
         <nav>
           {Links.map((link, index) => {
@@ -83,15 +71,22 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default MobileSideBar;
 
 const Wrapper = styled.div`
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1;
   flex: 2;
-  height: 100vh;
+  height: 90vh;
+  position: absolute;
+  width: 90%;
+  transform: translateX(-100%);
+
+  .showSide {
+    transform: translateX(100%);
+  }
+
+  .hideSide {
+    transform: translateX(0%);
+  }
 
   .logo {
     img {
@@ -201,9 +196,7 @@ const Wrapper = styled.div`
     }
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (min-width: 700px) {
     display: none;
-    left: 0;
-    transform: translateX(-200%);
   }
 `;

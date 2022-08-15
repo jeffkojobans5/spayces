@@ -22,7 +22,7 @@ const columns = [
       return (
         <div className="info">
           <div className="image">
-            <img src={ProfilePic} alt="" />
+            <img src={params.row.image} alt="user" />
           </div>
           <div className="name">
             <h3> {params.row.fullName} </h3>
@@ -101,6 +101,8 @@ const rows = [
     email: "justinmarkson@example.com",
     firstName: "Jon",
     age: 35,
+    image:
+      "https://res.cloudinary.com/bansah/image/upload/v1660525700/spayces/front_l0p67f.png",
   },
   {
     id: 2,
@@ -109,6 +111,8 @@ const rows = [
     email: "justinmarkson@example.com",
     firstName: "Cersei",
     age: 42,
+    image:
+      "https://res.cloudinary.com/bansah/image/upload/v1660525700/spayces/Avatar-1_zpqjez.png",
   },
   {
     id: 3,
@@ -117,6 +121,8 @@ const rows = [
     email: "justinmarkson@example.com",
     firstName: "Jaime",
     age: 45,
+    image:
+      "https://res.cloudinary.com/bansah/image/upload/v1660525700/spayces/Avatar-2_ftcp0i.png",
   },
   {
     id: 4,
@@ -125,6 +131,8 @@ const rows = [
     email: "justinmarkson@example.com",
     firstName: "Arya",
     age: 16,
+    image:
+      "https://res.cloudinary.com/bansah/image/upload/v1660525700/spayces/Avatar-3_vmfegc.png",
   },
   {
     id: 5,
@@ -133,6 +141,8 @@ const rows = [
     email: "justinmarkson@example.com",
     firstName: "Daenerys",
     age: null,
+    image:
+      "https://res.cloudinary.com/bansah/image/upload/v1660525700/spayces/Avatar-4_rwybyn.png",
   },
   {
     id: 6,
@@ -141,6 +151,8 @@ const rows = [
     email: "justinmarkson@example.com",
     firstName: null,
     age: 150,
+    image:
+      "https://res.cloudinary.com/bansah/image/upload/v1660525702/spayces/Avatar-5_zkpqkg.png",
   },
   {
     id: 7,
@@ -149,6 +161,8 @@ const rows = [
     email: "justinmarkson@example.com",
     firstName: "Ferrara",
     age: 44,
+    image:
+      "https://res.cloudinary.com/bansah/image/upload/v1660525702/spayces/Avatar-6_mr7lkq.png",
   },
   {
     id: 8,
@@ -157,6 +171,8 @@ const rows = [
     email: "justinmarkson@example.com",
     firstName: "Rossini",
     age: 36,
+    image:
+      "https://res.cloudinary.com/bansah/image/upload/v1660525699/spayces/Avatar-7_ekfot8.png",
   },
   {
     id: 9,
@@ -171,28 +187,30 @@ const rows = [
 export default function DataTable() {
   return (
     <Wrapper
-      className="global-main-container"
-      style={{ height: 500, width: "95%" }}
+    // className="global-main-container"
+    // style={{ height: 500, width: "95%" }}
     >
-      <div className="cover">
-        <h4>
-          New Orders <span className="dot">•</span>
-          <span className="total-order global-text-light-gray ">
-            {" "}
-            Total order value: GHS 42,350.00
-          </span>
-        </h4>
+      <div className="global-main-container">
+        <div className="cover">
+          <h4>
+            New Orders <span className="dot">•</span>
+            <span className="total-order global-text-light-gray ">
+              {" "}
+              Total order value: GHS 42,350.00
+            </span>
+          </h4>
+        </div>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          pageSize={8}
+          rowsPerPageOptions={[5]}
+          checkboxSelection
+          getRowClassName={(params) =>
+            params.indexRelativeToCurrentPage % 2 === 0 ? "even" : "odd"
+          }
+        />
       </div>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={8}
-        rowsPerPageOptions={[5]}
-        checkboxSelection
-        getRowClassName={(params) =>
-          params.indexRelativeToCurrentPage % 2 === 0 ? "even" : "odd"
-        }
-      />
     </Wrapper>
   );
 }
@@ -200,6 +218,10 @@ export default function DataTable() {
 const Wrapper = styled.div`
   margin-top: 3rem;
 
+  .global-main-container {
+    height: 500px;
+    width: 95%;
+  }
   .cover {
     padding: 1.5rem 1rem;
     border: 1px solid #e5e5e5;

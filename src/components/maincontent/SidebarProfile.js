@@ -69,4 +69,10 @@ const Wrapper = styled.div`
     justify-content: end;
     align-items: center;
   }
+
+  @media only screen and (max-width: 700px) {
+    .profilePic {
+      display: none;
+    }
+  }
 `;

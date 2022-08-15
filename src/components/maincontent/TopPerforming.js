@@ -60,4 +60,10 @@ const Wrapper = styled.div`
     grid-gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
   }
+
+  @media only screen and (max-width: 700px) {
+    .create-three-columns {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 `;

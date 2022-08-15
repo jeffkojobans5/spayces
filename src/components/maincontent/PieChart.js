@@ -8,14 +8,13 @@ charts(FusionCharts);
 
 const dataSource = {
   chart: {
-    showpercentvalues: "1",
-    defaultcenterlabel: "Android Distribution",
+    // showpercentvalues: "1",
+    // defaultcenterlabel: "Android Distribution",
     aligncaptionwithcanvas: "0",
     captionpadding: "0",
     decimals: "1",
-    plottooltext:
-      "<b>$percentValue</b> of our Android users are on <b>$label</b>",
-    centerlabel: "# Users: $value",
+    plottooltext: "<b>$percentValue</b> of Order activity are <b>$label</b>",
+    centerlabel: "# Order Activity: $value",
     theme: "fusion",
   },
   data: [

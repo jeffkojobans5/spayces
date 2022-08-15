@@ -16,7 +16,7 @@ const Statistics = () => {
         <div className="graph-chart">
           <div className="total-activity">
             <div className="total">
-              <p class="global-text-light-gray ">
+              <p className="global-text-light-gray ">
                 {" "}
                 Total Paid <span className="price"> +2.5%</span>{" "}
               </p>
@@ -33,7 +33,7 @@ const Statistics = () => {
         <div className="pie-chart">
           <div className="total-activity">
             <div className="total">
-              <p class="global-text-light-gray "> Order Activity</p>
+              <p className="global-text-light-gray "> Order Activity</p>
             </div>
             <div className="activity">
               <p>
@@ -103,6 +103,12 @@ const Wrapper = styled.div`
 
     .pie-chart {
       flex: 5;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .statistics {
+      flex-direction: column;
     }
   }
 `;

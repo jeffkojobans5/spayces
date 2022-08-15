@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 // styled components
 import styled from "styled-components";
 
@@ -8,10 +10,16 @@ import Balances from "./Balances";
 import TopPerforming from "./TopPerforming";
 import Orders from "./Orders";
 import Statistics from "./Statistics";
+import MobileHeader from "../MobileHeader";
+import MobileSideBar from "../sidebar/MobileSideBar";
 
 const MainContent = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <Wrapper>
+      <MobileHeader isOpen={isOpen} setIsOpen={setIsOpen} />
+      <MobileSideBar isOpen={isOpen} />
       <SidebarProfile />
       <WelcomeNewProduct />
       <Balances />

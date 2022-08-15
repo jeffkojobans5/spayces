@@ -9,7 +9,11 @@ const BalanceProps = (props) => {
   return (
     <Wrapper>
       <div className="balance-card">
-        <img src={BalanceIcon} alt="balance" className="balance-icon" />
+        <p>
+          {" "}
+          <img src={BalanceIcon} alt="balance" className="balance-icon" />{" "}
+          <span className="mobile-text"> {desc} </span>
+        </p>
         <div className="amount-rate">
           <div className="amount">
             <h2>{amount} </h2>
@@ -36,6 +40,10 @@ const Wrapper = styled.div`
     .balance-icon {
       width: 40px;
     }
+  }
+
+  .mobile-text {
+    display: none !important;
   }
 
   .amount {
@@ -81,6 +89,26 @@ const Wrapper = styled.div`
       img {
         width: 75%;
       }
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .profilePic {
+      display: none;
+    }
+
+    .balance-icon {
+      width: 7% !important;
+    }
+
+    .mobile-text {
+      display: inline !important;
+      position: relative;
+      top: -8px;
+    }
+
+    .amount small {
+      display: none;
     }
   }
 `;
